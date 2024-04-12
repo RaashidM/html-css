@@ -1,0 +1,56 @@
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    "header header header"
+    "main main aside"
+    "footer footer footer";
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: 1fr 2fr 1fr;
+  min-height: 100vh;
+}
+
+
+header {
+  grid-area: header;
+  background-color: #333;
+  color: white;
+  padding: 1rem;
+}
+
+
+main {
+  grid-area: main;
+  padding: 1rem;
+}
+
+
+aside {
+  grid-area: aside;
+  background-color: #f4f4f4;
+  padding: 1rem;
+}
+
+
+footer {
+  grid-area: footer;
+  background-color: #333;
+  color: white;
+  padding: 1rem;
+}
+
+
+#book-list {
+  border: 1px solid #ccc;
+  padding: 1rem;
+}
+
+#cart {
+  border: 1px solid #ccc;
+  padding: 1rem;
+}
+
+
+.book-item button.disabled {
+  pointer-events: none;
+  opacity: 0.5;
+}
